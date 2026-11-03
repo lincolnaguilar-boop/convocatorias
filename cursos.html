@@ -67,7 +67,7 @@ const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&g
 const tc=x=>String(x).toLowerCase().replace(/(^|[\s(\-\/])(\p{L})(\p{L}*)/gu,(m,a,b,c,i)=>a+(i>0&&/^(de|del|la|las|los|el|y|e|en)$/.test(b+c)?b:b.toUpperCase())+c);
 document.querySelectorAll('#dep option').forEach(o=>{if(o.value)o.textContent=tc(o.value);});
 // Cada curso tiene su botón: abre tu WhatsApp con el curso ya escrito, la persona decide si lo envía
-function pedir(t,n,dep){return 'https://wa.me/'+WA+'?text='+encodeURIComponent('Hola, me falta el curso o diplomado de '+t+' (lo piden '+n+' convocatorias del Estado'+(dep?' en '+tc(dep):'')+'). Quiero información.');}
+function pedir(t,n,dep){return 'https://wa.me/'+WA+'?text='+encodeURIComponent('Hola, me falta el curso o diplomado de '+t+' ('+(n===1?'lo pide 1 convocatoria':'lo piden '+n+' convocatorias')+' del Estado'+(dep?' en '+tc(dep):'')+'). Quiero información.');}
 function pintar(){const dep=$('dep').value,area=$('area').value,prof=$('prof').value;
 const r=D.filter(o=>(!dep||o.d===dep)&&(!area||o.a.includes(area))&&(!prof||o.p.includes(prof)));
 const c={};r.forEach(o=>o.t.forEach(t=>{const x=c[t]??={n:0,s:0,ns:0,r:0};x.n++;if(o.r)x.r++;if(o.s){x.s+=o.s;x.ns++;}}));

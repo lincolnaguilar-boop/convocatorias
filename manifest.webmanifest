@@ -40,6 +40,17 @@
      "sizes": "192x192"
     }
    ]
+  },
+  {
+   "name": "Prácticas en el Estado",
+   "short_name": "Prácticas",
+   "url": "practicas.html",
+   "icons": [
+    {
+     "src": "icono-192.png",
+     "sizes": "192x192"
+    }
+   ]
   }
  ]
 }

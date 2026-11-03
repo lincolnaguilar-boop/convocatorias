@@ -1,11 +1,11 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-4HkzF1gYpAu3cslpiIUBy9+bcL50btZ0m1pBBeEoNB4=' 'sha256-uRdL1VPlvDZxQXTkJVYnIkzzUbmxpKtbXxlfEM5nwOA='; style-src 'unsafe-inline'; img-src 'self' data:; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-iHi2jVw/r8SulBoEmUEMTZv6LtuiwQqaGx5oChHXNlU=' 'sha256-uRdL1VPlvDZxQXTkJVYnIkzzUbmxpKtbXxlfEM5nwOA='; style-src 'unsafe-inline'; img-src 'self' data:; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>Cursos más pedidos · Convocatorias del Día | Perú</title>
 <meta property="og:title" content="Cursos y diplomados más pedidos en las convocatorias">
 <meta property="og:description" content="Los cursos que más piden las convocatorias del Estado abiertas hoy, por región, área y profesión.">
 <meta property="og:image" content="https://lincolnaguilar-boop.github.io/convocatorias/portada.png">
-<meta property="og:url" content="https://lincolnaguilar-boop.github.io/convocatorias/">
+<meta property="og:url" content="https://lincolnaguilar-boop.github.io/convocatorias/cursos.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="description" content="Los cursos y diplomados que más piden las convocatorias del Estado peruano abiertas hoy, por región, área y profesión.">
@@ -103,7 +103,7 @@ const tc=(function crearTituloCaso(siglas) {
     if (i > 0 && todo[i - 1] !== '.' && CONECTORES.test(m)) return m;
     return m.charAt(0).toUpperCase() + m.slice(1);
   });
-})(["UGEL","DIRESA","GERESA","DIRIS","MINSA","ESSALUD","SIS","INS","INEN","INSN","SAMU","DIGESA","DIGEMID","CENARES","IPRESS","RIS","AIS","SUNAT","SUNARP","SUNAFIL","SUNEDU","SUSALUD","SUNASS","SUCAMEC","SUTRAN","RENIEC","ONP","ONPE","JNE","JNJ","SERVIR","INEI","OSCE","OECE","SENASA","SENAMHI","SENACE","INDECOPI","OEFA","OSINERGMIN","OSIPTEL","OSITRAN","DEVIDA","FONCODES","INABIF","CONADIS","CONCYTEC","SERFOR","SERNANP","INGEMMET","IPEN","ITP","ATU","APN","MIDIS","MIMP","MINEDU","MINAM","MINEM","MIDAGRI","MINCETUR","MININTER","MINDEF","MINJUSDH","MTC","MEF","PCM","PNP","INPE","CEM","DEMUNA","PAE","AIRHSP","UNTELS","UTES","MC","IRTP","INBP","UNMSM","UNI","CETPRO","IESTP","SBS","BCRP","CAS","OCI","TI","TIC","RRHH","SIAF","SIGA","SEACE","BIM","SST","UCI","UCIN","CRED","RNE","SERUMS","TBC","VIH","MYPE","RUC","DNI","SAC","SRL","EIRL","EPS","SAT","GORE","PRONIED","PRONABEC","QALIWARMA","PIA","PIM","POI","PEI","MOF","ROF","TUPA","SGD","PAD","DRE","DRA","DRTPE","DIRCETUR","DREM","OGPP","RNP","PTCD","EBR","GRD"]);
+})(["UGEL","DIRESA","GERESA","DIRIS","MINSA","ESSALUD","SIS","INS","INEN","INSN","SAMU","DIGESA","DIGEMID","CENARES","IPRESS","RIS","AIS","SUNAT","SUNARP","SUNAFIL","SUNEDU","SUSALUD","SUNASS","SUCAMEC","SUTRAN","RENIEC","ONP","ONPE","JNE","JNJ","SERVIR","INEI","OSCE","OECE","SENASA","SENAMHI","SENACE","INDECOPI","OEFA","OSINERGMIN","OSIPTEL","OSITRAN","DEVIDA","FONCODES","INABIF","CONADIS","CONCYTEC","SERFOR","SERNANP","INGEMMET","IPEN","ITP","ATU","APN","MIDIS","MIMP","MINEDU","MINAM","MINEM","MIDAGRI","MINCETUR","MININTER","MINDEF","MINJUSDH","MTC","MEF","PCM","PNP","INPE","CEM","DEMUNA","PAE","AIRHSP","UNTELS","UTES","MC","IRTP","INBP","UNMSM","UNI","CETPRO","IESTP","SBS","BCRP","CAS","OCI","SCI","TI","TIC","RRHH","SIAF","SIGA","SEACE","BIM","SST","UCI","UCIN","CRED","RNE","SERUMS","TBC","VIH","MYPE","RUC","DNI","SAC","SRL","EIRL","EPS","SAT","GORE","PRONIED","PRONABEC","QALIWARMA","PIA","PIM","POI","PEI","MOF","ROF","TUPA","SGD","PAD","DRE","DRA","DRTPE","DIRCETUR","DREM","OGPP","RNP","PTCD","EBR","GRD"]);
 // Las que ya cerraron (según la fecha de hoy en Lima) dejan de contar como abiertas, igual que en el reporte
 const HOY=new Date().toLocaleDateString('en-CA',{timeZone:'America/Lima'});D.forEach(o=>{if(o.f&&o.f<HOY)o.ab=0;});
 $('nAbiertas').textContent=Object.entries(CIERRES).reduce((n,[f,c])=>n+(!f||f>=HOY?c:0),0).toLocaleString('es-PE');

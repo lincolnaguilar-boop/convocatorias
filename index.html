@@ -84,6 +84,9 @@ footer{color:var(--gris);font-size:13px;text-align:center;padding:20px 16px 28px
 .unete{grid-column:1/-1;background:linear-gradient(150deg,#0d4f5c,#0f6e66);color:#fff;border-radius:16px;padding:16px 18px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px}
 .unete p{margin:0;flex:1 1 220px;font-size:14.5px;line-height:1.4;opacity:.95}.unete b{display:block;font-size:17px;margin-bottom:2px}
 .btn-canal{background:#25d366;color:#0b2e1a}
+.testers{background:#e7f5ef;color:var(--tinta);border:1.5px solid #b9e3d0;border-radius:14px;padding:12px 14px;margin-top:10px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.testers p{margin:0;flex:1 1 220px;font-size:14px;line-height:1.4}.testers b{display:block;font-size:15.5px;margin-bottom:2px}
+@media (display-mode:standalone){.testers{display:none}}
 [hidden]{display:none!important}
 .fila-marca{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .btn-instalar{flex:none;background:rgba(255,255,255,.16);color:#fff;border:1.5px solid rgba(255,255,255,.55);border-radius:999px;padding:6px 12px;font-family:inherit;font-weight:700;font-size:13px;cursor:pointer}
@@ -108,6 +111,7 @@ footer{color:var(--gris);font-size:13px;text-align:center;padding:20px 16px 28px
 </div></div></header>
 <main class="envoltura">
 <p class="sin-conexion" id="sinConexion" hidden>Sin internet: estás viendo la última copia guardada.</p>
+<aside class="testers"><p><b>🙋 Ayúdanos a probar la app en Android</b>Buscamos 15 personas que la instalen desde Play Store y la mantengan 14 días. Es gratis.</p><a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/51995967832?text=Hola%2C%20quiero%20probar%20la%20app%20de%20convocatorias%20en%20Play%20Store.%20Mi%20correo%20de%20Gmail%20es%3A%20">Quiero probarla</a></aside>
 <button class="aviso-guardadas" id="avisoGuardadas" type="button" hidden></button>
 <div class="buscador"><input id="q" type="search" placeholder="Buscar puesto, entidad, carrera o lugar…" autocomplete="off" aria-label="Buscar">
 <button class="btn btn-filtros" id="verFiltros" aria-expanded="false" aria-controls="filtros">Filtros <span class="n" id="nFiltros" hidden></span></button></div>
